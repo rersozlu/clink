@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Web3Modal } from "./Web3Modal";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <meta name="twitter:card" content="player" />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+        <meta name="twitter:title" content="Your App Title" />
+        <meta name="twitter:description" content="Brief description of your app" />
+        <meta name="twitter:player" content="https://your-domain.com/twitter-card.html" />
+        <meta name="twitter:player:width" content="360" />
+        <meta name="twitter:player:height" content="560" />
+        <meta name="twitter:image" content="https://your-domain.com/preview-image.png" />
+      </Head>
+      <body className={inter.className}>
+        <Web3Modal>{children}</Web3Modal>
+      </body>
     </html>
   );
 }
