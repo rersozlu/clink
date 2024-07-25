@@ -23,10 +23,13 @@ export default function RootLayout({
         <meta name="twitter:site" content="@YourTwitterHandle" />
         <meta name="twitter:title" content="Your App Title" />
         <meta name="twitter:description" content="Brief description of your app" />
-        <meta name="twitter:player" content="https://your-domain.com/twitter-card.html" />
+        <meta name="twitter:player" content="https://clink-two.vercel.app/twitter-card.html" />
         <meta name="twitter:player:width" content="360" />
         <meta name="twitter:player:height" content="560" />
-        <meta name="twitter:image" content="https://your-domain.com/preview-image.png" />
+        <meta
+          name="twitter:image"
+          content="https://cdn.webrazzi.com/uploads/2024/02/clave-789.png"
+        />
       </Head>
       <body className={inter.className}>
         <Web3Modal>{children}</Web3Modal>
